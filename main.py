@@ -44,14 +44,16 @@ def run_alexa():
         time=datetime.datetime.now().strftime('%H:%M')
         print(time)
         talk('Current time is'+ time)
-    elif 'who' in command:
-        person = command.replace('who','')
-        info=wiki.summary(person,1)
-        print(info)
-        talk(info)
+    # elif 'who' in command:
+    #     person = command.replace('who','')
+    #     info=wiki.summary(person,1)
+    #     print(info)
+    #     talk(info)
     elif 'joke' in command:
         print(pj.get_jokes())
         talk(pj.get_jokes())
 
 while True:
     run_alexa()
+
+    print('JHVDJVGJRBKGBKE')
