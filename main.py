@@ -12,6 +12,10 @@ engine= ptt.init()
 voices=engine.getProperty('voices')
 print(voices)
 engine.setProperty('voices',voices[0].id)
+
+
+
+
 def talk(text):
     engine.say(text)
     engine.runAndWait()
@@ -20,6 +24,7 @@ def take_command():
     try:
         with sr.Microphone() as source:
             print('listening...')
+            listener.adjust_for_ambient_noise(source, duration=1)
             voice = listener.listen(source)
             command = listener.recognize_google(voice)
        # print(command)
@@ -55,5 +60,3 @@ def run_alexa():
 
 while True:
     run_alexa()
-
-
