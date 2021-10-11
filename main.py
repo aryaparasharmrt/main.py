@@ -20,6 +20,7 @@ def take_command():
     try:
         with sr.Microphone() as source:
             print('listening...')
+            listener.adjust_for_ambient_noise(source, duration=1)
             voice = listener.listen(source)
             command = listener.recognize_google(voice)
        # print(command)
