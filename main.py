@@ -5,7 +5,8 @@ import datetime
 import wikipedia as wiki
 import pyjokes as pj
 
-
+def add(num1, num2):
+    return num1 + num2;
 
 listener = sr.Recognizer()
 engine= ptt.init()
