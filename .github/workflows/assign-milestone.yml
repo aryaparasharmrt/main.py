@@ -15,4 +15,5 @@ jobs:
         uses: OctoLinker/assign-milestone@v1
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          milestone-name: 'Your Milestone Name'
+          milestone-name: 'Python Milestone'
+          file-path: 'hello.py'
