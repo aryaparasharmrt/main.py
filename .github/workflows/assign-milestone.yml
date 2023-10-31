@@ -16,4 +16,4 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           milestone-name: 'Python Milestone'
-          file-path: 'hello.py'
+          file-path: 'main.py'
